@@ -1,0 +1,23 @@
+<form method="post" action="/updateData" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="<%= singlerec.id %>" />
+    <table border="1">
+        <tr>
+            <td>Name :- </td>
+            <td>
+                <input type="text" value="<%= singlerec.name %>" name="name">
+            </td> 
+        </tr>
+        <tr>
+            <td>File upload</td>
+            <td>
+                <input type="file" name="avatar">
+                <img src="/<%= singlerec.avatar  %>" width="100"/>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Edit">
+            </td>
+        </tr>
+    </table>

@@ -1,0 +1,20 @@
+<table border="1">
+
+    <tr>
+        <td>name</td>
+        <td>file</td>
+        <td>action</td>
+    </tr>
+
+    <% alldata.map((val)=>{  %>
+        <tr>
+            <td><%=val.name%></td>
+            <td><img src="<%=val.avatar%>"  width="100"></td>
+            <td>
+                <a href="/deletedata/<%= val.id %>">Delete</a> ||
+                <a href="/editdata/<%= val.id %>">Edit</a> 
+            </td>
+        </tr>
+
+        <% }) %>
+</table>
